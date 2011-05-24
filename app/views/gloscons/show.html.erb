@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Empname:</b>
+  <%= @gloscon.empname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @gloscon.lastname %>
+</p>
+
+<p>
+  <b>Desig:</b>
+  <%= @gloscon.desig %>
+</p>
+
+
+<%= link_to 'Edit', edit_gloscon_path(@gloscon) %> |
+<%= link_to 'Back', gloscons_path %>

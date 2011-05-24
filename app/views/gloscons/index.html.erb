@@ -1,0 +1,27 @@
+<h1>Listing gloscons</h1>
+
+<table>
+  <tr>
+    <th>Empname</th>
+    <th>Lastname</th>
+    <th>Desig</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gloscons.each do |gloscon| %>
+  <tr>
+    <td><%= gloscon.empname %></td>
+    <td><%= gloscon.lastname %></td>
+    <td><%= gloscon.desig %></td>
+    <td><%= link_to 'Show', gloscon %></td>
+    <td><%= link_to 'Edit', edit_gloscon_path(gloscon) %></td>
+    <td><%= link_to 'Destroy', gloscon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gloscon', new_gloscon_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@gloscon) do |f| %>
+  <% if @gloscon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gloscon.errors.count, "error") %> prohibited this gloscon from being saved:</h2>
+
+      <ul>
+      <% @gloscon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :empname %><br />
+    <%= f.text_field :empname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :desig %><br />
+    <%= f.text_field :desig %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
